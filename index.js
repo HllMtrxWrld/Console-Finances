@@ -86,3 +86,25 @@ var finances = [
 ['Jan-2017', 138230],
 ['Feb-2017', 671099]
 ];
+
+console.log('Financial Analysis');
+console.log('----------------------------');
+
+// Task 1 - the total number of months included in the dataset
+
+let totalMonths = finances.length;
+console.log('Total Months:', totalMonths);
+
+// Task 2 - the net total amount of Profit/Losses over the entire period
+
+let netProfit = 0;
+
+for (let i = 0; i < finances.length; i++) {
+    netProfit += finances[i][1];
+    //console.log(netProfit);
+}
+
+let Total = netProfit;
+console.log('Total: $' + Total);
+
+// Taks 3 -The average of the changes in Profit/Losses over the entire period.
