@@ -107,4 +107,56 @@ for (let i = 0; i < finances.length; i++) {
 let Total = netProfit;
 console.log('Total: $' + Total);
 
-// Taks 3 -The average of the changes in Profit/Losses over the entire period.
+// Taks 3 - The average of the changes in Profit/Losses over the entire period.
+
+//let monthChange = 0;
+
+//for (let i = 0, x = 1; i < finances.length; i++, x++) {
+    //monthChange = finances[x][1]/* Ця одиничка викликаж помилку*/ - finances [i][1];
+  // console.log(monthChange);
+   /*let averageMonthChange;
+   for (ii = 0; ii < monthChange.length; ii++) {
+    averageMonthChange += monthChange[ii];
+    console.log(averageMonthChange);
+   }*/
+
+//}
+// for (i = 0; i < finances.length-1; i++) {
+ //   monthChange = finances[i + 1][1] - finances[i][1];
+    //console.log(monthChange);
+  //  }
+    
+
+
+//let averageChange = monthChange \ totalMonths;
+//console.log(averageChange);
+//let monthChangesum = 0;
+//console.log(typeof monthChange);
+//for (i = 0; i < )
+
+let changesArray = Array.from(Array(totalMonths), () => Array(2));
+changesArray[0] = ['Jan-2010', 867884];
+//console.log(changesArray);
+
+for (let i = 1; i < totalMonths; i++) {
+    changesArray[i][0] = finances [i][0];
+    changesArray[i][1] = finances [i][1] - finances[i - 1][1];
+}
+//console.log(changesArray);
+
+let sum = 0;
+for (let i = 0; i < changesArray.length; i++) {
+    sum += changesArray[i][1];
+    //console.log(sum);
+}
+
+let averageChange = sum / totalMonths;
+console.log('Average  Change: $' + Math.round(averageChange));
+
+// Task 4 - the greatest increase in profits (date and amount) over the entire period.
+
+for (let i = 0; i < changesArray; i++) {
+    if (i > i + 1) {
+        
+    }
+}
