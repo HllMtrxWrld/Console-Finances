@@ -125,7 +125,7 @@ for (let i = 0; i < changesArray.length; i++) {
 }
 
 let averageChange = sum / totalMonths;
-console.log('Average  Change: $' + Math.round(averageChange));
+console.log('Average  Change: $' + averageChange.toFixed(2));
 
 // Task 4 - the greatest increase in profits and greatest decrease in losses
 // (date and amount) over the entire period.
